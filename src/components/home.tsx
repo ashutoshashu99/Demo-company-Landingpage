@@ -14,9 +14,11 @@ import { Button } from "@/components/ui/button";
 
 function Landing() {
     return (
-        <>
-            <div className=" bg-[url(/home.svg)] bg-cover bg-no-repeat  w-[1200] h-[1000] relative bottom-44 py-40">
-                <div className='w-2/5 m-20 mt-'>
+
+        <div className='bg-[url(/home.svg)] bg-cover bg-no-repeat h-[900px] w-[1440] '>
+            <div>
+
+                <div className='w-2/5 m-20'>
                     <h1 className='text-4xl '><span className='text-yellow-500 font-bold '>User-Centric Excellence</span>: Our <br /> <span className='font-semibold'>App Development services</span><br /> Tackles Your Pain</h1>
                     <div className='mt-6'>Experience a Seamless Digital Journey with <span className='text-[#88A855] font-bold'>Desun</span> - Where Every Line of Code Resolves Your Challenges and <span className='text-yellow-500 font-semibold'>Elevates Your App Experience</span> to Unparalleled Heights.</div>
                 </div>
@@ -59,7 +61,11 @@ function Landing() {
                     </CardFooter>
                 </Card>
             </div>
-        </>
+            {/* <div>
+                    <img src="home.svg" alt="" />
+                </div> */}
+        </div>
+
     )
 }
 
