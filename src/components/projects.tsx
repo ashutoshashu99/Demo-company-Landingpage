@@ -114,7 +114,7 @@ const Project = () => {
           {["Project 1", "Project 2", "Project 3", "Project 4"].map(
             (name, index) => {
               return (
-                <div>
+                <div key={index}>
                   <button
                     className=" text-2xl focus:underline focus:font-semibold focus:decoration-yellow-400 focus:underline-offset-8 decoration-4 w-40"
                     onClick={() => setSliderIndex(index)}

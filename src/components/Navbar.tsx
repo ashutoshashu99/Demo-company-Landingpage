@@ -17,10 +17,7 @@ const CustomnavLink = ({ title }: navProp) => {
 const Navbar = () => {
   return (
     <>
-      <header
-        
-        className=" sticky top-6 shadow-2xl flex items-center justify-around h-[92px] bg-white rounded-2xl mx-12    "
-      >
+      <header className=" sticky top-6 shadow-2xl flex items-center justify-around h-[92px] bg-white rounded-2xl mx-12    ">
         <div className=" inline-flex items-center">
           <img src="company-logo.png" alt="logo" className=" h-14" />
           <div className=" flex-initial p-2 text-sm">
@@ -30,9 +27,11 @@ const Navbar = () => {
         </div>
         <div>
           <nav className="inline-flex gap-12 pr-40">
-            {["Service", "Media", "Cases", "FAQ", "Contacts"].map((title) => (
-              <CustomnavLink title={title} />
-            ))}
+            {["Service", "Media", "Cases", "FAQ", "Contacts"].map(
+              (title, index) => (
+                <CustomnavLink title={title} key={index} />
+              )
+            )}
           </nav>
         </div>
         <div>

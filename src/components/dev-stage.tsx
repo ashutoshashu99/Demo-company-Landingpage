@@ -6,9 +6,14 @@ import {
   CardTitle,
 } from "../components/ui/card";
 
-function customCard(imgUrl: string, title: string, description: string) {
+function customCard(
+  imgUrl: string,
+  title: string,
+  description: string,
+  key: number
+) {
   return (
-    <Card className=" extend">
+    <Card className=" extend" key={key}>
       <CardHeader>
         <CardTitle>
           <div className=" inline-flex gap-8 items-center">
@@ -70,14 +75,14 @@ function DevStage() {
 
         <div className=" inline-flex justify-between">
           <div className=" flex flex-col gap-4 w-1/2">
-            {leftList.map(({ imgUrl, title, disc }) =>
-              customCard(imgUrl, title, disc)
+            {leftList.map(({ imgUrl, title, disc }, key) =>
+              customCard(imgUrl, title, disc, key)
             )}
           </div>
           <img src="hope-gif1.png" alt="image" className=" w-1/2" />
           <div className=" flex flex-col gap-4 w-1/2">
-            {rightList.map(({ imgUrl, title, disc }) =>
-              customCard(imgUrl, title, disc)
+            {rightList.map(({ imgUrl, title, disc }, key) =>
+              customCard(imgUrl, title, disc, key)
             )}
           </div>
         </div>
