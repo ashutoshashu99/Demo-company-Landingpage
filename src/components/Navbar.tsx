@@ -1,50 +1,66 @@
-"use client"
+"use client";
+import * as React from "react";
+import Link from "next/link";
 
-import * as React from "react"
-import Link from "next/link"
-
-
-
-function Navbar() {
-
-    return (
-        <>
-            <header className="fixed top-4 ml-3 w-full bg-white z-50 shadow-md rounded-md flex items-center justify-between px-4 py-5">
-                <div className="flex items-center"> 
-                    <Link href="/">
-                        <h1 className="text-xl font-bold text-gray-800">Company Logo</h1>
-                    </Link>
-                </div>
-                <nav className="flex space-x-4">
-                    <Link href="#" className="text-gray-700 hover:text-gray-500">
-                        Services
-                    </Link>
-                    <Link href="#" className="text-gray-700 hover:text-gray-500">
-                        Media
-                    </Link>
-                    <Link href="#" className="text-gray-700 hover:text-gray-500">
-                        Cases
-                    </Link>
-                    <Link href="#" className="text-gray-700 hover:text-gray-500">
-                        FAQ
-                    </Link>
-                    <Link href="#" className="text-gray-700 hover:text-gray-500">
-                        Contact Us
-                    </Link>
-                </nav>
-                <div className="flex space-x-2"> {/* Part 3: Buttons */}
-                    <button className="px-3 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700">
-                        Button 1
-                    </button>
-                    <button className="px-3 py-2 bg-gray-200 text-gray-700 font-bold rounded hover:bg-gray-300">
-                        Button 2
-                    </button>
-                </div>
-            </header>
-
-        </>
-
-    )
+interface navProp {
+  title: string;
 }
 
-export default Navbar
+const CustomnavLink = ({ title }: navProp) => {
+  return (
+    <Link href={`#${title.toLocaleLowerCase()}`} className=" text-lg">
+      {title}
+    </Link>
+  );
+};
+
+const Navbar = () => {
+  return (
+    <>
+      <header
+        
+        className=" sticky top-6 shadow-2xl flex items-center justify-around h-[92px] bg-white rounded-2xl mx-12    "
+      >
+        <div className=" inline-flex items-center">
+          <img src="company-logo.png" alt="logo" className=" h-14" />
+          <div className=" flex-initial p-2 text-sm">
+            <p className=" font-semibold">MY COMPANY</p>
+            <p className="text-xs">DEMO COMPANY</p>
+          </div>
+        </div>
+        <div>
+          <nav className="inline-flex gap-12 pr-40">
+            {["Service", "Media", "Cases", "FAQ", "Contacts"].map((title) => (
+              <CustomnavLink title={title} />
+            ))}
+          </nav>
+        </div>
+        <div>
+          <div className=" flex p-4 gap-8 ">
+            <Link
+              href="tel: +91 0000000000"
+              className=" flex items-center  text-[#88A855] ml-8"
+            >
+              <img src="contact-icon.png" alt="phone-icon" className=" w-8 " />
+              91+ 0000000000
+            </Link>
+            <Link
+              href="mailto:Demo@gmail.com"
+              className=" flex items-center text-[#88A855]"
+              type="mail"
+            >
+              <img
+                src="mail-icon.png"
+                alt="mail-icon"
+                className=" w-8 mr-2 fill-current"
+              />
+              Demo@gmail.com
+            </Link>
+          </div>
+        </div>
+      </header>
+    </>
+  );
+};
+
+export default Navbar;
