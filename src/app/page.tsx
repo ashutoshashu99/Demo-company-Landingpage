@@ -2,9 +2,9 @@ import Contact from "@/components/contact";
 import Faq from "@/components/faq";
 import Teams from "@/components/teams";
 import Services from "@/components/sevices";
-import Navbar from "@/components/navbar";
 import Project from "@/components/projects";
 import DevStage from "@/components/dev-stage";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
