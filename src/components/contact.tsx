@@ -23,11 +23,11 @@ function Contact() {
             Lets discuss <br /> Your project
           </h1>
           <p className="mt-9">
-            {`Let's figure out how to create an effective application, its
+            {`Let's figure out how to create an effective application,  its
             cost and terms of its development`}
           </p>
         </div>
-        <Card className=" w-1/2 rounded-xl shadow-2xl">
+        <Card className=" w-1/2 my-12 mx-24 pt-8 rounded-xl shadow-2xl">
           <CardContent>
             <form>
               <div className="flex w-full items-center gap-2">
@@ -50,7 +50,6 @@ function Contact() {
                     </Label>
                     <Input id="phone" placeholder="" type="number" />
                   </div>
-                  
                   <div className="flex flex-col space-y-1.5">
                     <Label htmlFor="email">Business mail</Label>
                     <Input id="email" placeholder="" type="email" />

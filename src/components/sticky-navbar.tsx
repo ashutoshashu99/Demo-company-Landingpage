@@ -17,7 +17,7 @@ const CustomnavLink = ({ title }: navProp) => {
 const Navbar = () => {
   return (
     <>
-      <header className=" sticky top-6 shadow-2xl flex items-center justify-around h-[92px] bg-white rounded-2xl mx-12    ">
+      <header className=" sticky top-6 shadow-2xl flex items-center justify-around h-[92px] bg-white rounded-2xl mx-12 z-10">
         <div className=" inline-flex items-center">
           <img src="company-logo.png" alt="logo" className=" h-14" />
           <div className=" flex-initial p-2 text-sm">

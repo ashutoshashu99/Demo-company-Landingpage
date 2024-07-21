@@ -7,10 +7,11 @@ import DevStage from "@/components/dev-stage";
 import Navbar from "@/components/sticky-navbar";
 import Industries from "@/components/industries";
 import Landing from "@/components/home";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="bg-[#F2F4F7] scroll-smooth overflow-y-scroll h-lvh">
+    <main className="bg-[#F2F4F7] scroll-smooth overflow-y-scroll h-lvh ">
       <Navbar />
       <Landing/>
       <Services />
@@ -20,6 +21,7 @@ export default function Home() {
       <DevStage />
       <Teams />
       <Faq />
+      <Footer/>
     </main>
   );
 }
