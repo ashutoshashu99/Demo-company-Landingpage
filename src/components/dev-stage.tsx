@@ -13,17 +13,17 @@ function customCard(
   key: number
 ) {
   return (
-    <Card className=" extend" key={key}>
+    <Card className="rounded-xl shadow-sm" key={key}>
       <CardHeader>
         <CardTitle>
           <div className=" inline-flex gap-8 items-center">
             <img src={imgUrl} alt="LOGO" />
-            <h1 className=" text-3xl">{title}</h1>
+            <h1 className=" text-xl font-medium text-slate-800">{title}</h1>
           </div>
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <p className=" text-xl">{description}</p>
+        <p className=" text-sm text-slate-500">{description}</p>
       </CardContent>
     </Card>
   );
@@ -69,7 +69,7 @@ function DevStage() {
   return (
     <>
       <section className=" mx-20 mt-12" id="service ">
-        <h1 className=" text-5xl font-semibold pb-10">
+        <h1 className=" text-4xl font-semibold pb-10">
           Application Development Stages
         </h1>
 
